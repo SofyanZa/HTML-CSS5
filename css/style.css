@@ -1,0 +1,82 @@
+.box {
+    height: 200px;
+  }
+  
+  #noir {
+    background: #222;
+    border: 15px solid #000;
+  }
+  
+  #vert {
+    background: #292;
+    border: 15px solid #070;
+  }
+  
+  #rouge {
+    background: #922;
+    border: 15px solid #700;
+  }
+  
+  #bleu {
+    background: #229;
+    border: 15px solid #007;
+  }
+  
+  @media (min-width: 600px) {
+    body {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  
+    .box {
+      width: 50%;
+    }
+  
+    #vert {
+      order: -1;
+    }
+  }
+  
+  @media (min-width: 900px) {
+    #noir {
+      display: none;
+    }
+  
+    /* solution pratique, on calcule Un tiers de la page
+    .box {
+      width: calc(100% / 3);
+    } */
+  
+    /* autre solution tout aussi efficace, on réinitialise la propriété flex-wrap */
+    body {
+      flex-wrap: initial; /* flex-wrap: nowrap; a le même effet */
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    #noir {
+      display: initial;
+      order: 1;
+    } 
+    #vert {
+      order: initial;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
